@@ -12,6 +12,6 @@ Load the desired library on you Bash scripts as follows:
 
 ```bash
 ...
-. <(curl -s https://raw.githubusercontent.com/juan131/bash-libraries/master/lib/liblog.bash)
+source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/juan131/bash-libraries/master/lib/liblog.bash)"
 ...
 ```
