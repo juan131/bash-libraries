@@ -44,9 +44,11 @@ Here you can find a series of tips when developing a Bash script:
 - Put `then;`, `do;`, etc. on the same line.
 - Use `[[` instead of `[`.
 - Prefer absolute paths.
-- Avoiding temporary files. Use `<()` to transform commands output into sth that can be used as a filename:
+- Avoiding temporary files. Use process substitution (`<()`) to transform commands output into sth that can be used as a filename:
 
     ~~~bash
+    # Note that if any of the wget fails, and the diff succeed, this
+    # statement will success regarding of built-in options!
     diff <(wget -O - url1) <(wget -O - url2)
     ~~~
 
