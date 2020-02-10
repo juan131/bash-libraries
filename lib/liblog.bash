@@ -3,10 +3,10 @@
 # Logging Library
 
 # Color palette
-declare -r RESET='\033[0m'
-declare -r GREEN='\033[38;5;2m'
-declare -r RED='\033[38;5;1m'
-declare -r YELLOW='\033[38;5;3m'
+RESET='\033[0m'
+GREEN='\033[38;5;2m'
+RED='\033[38;5;1m'
+YELLOW='\033[38;5;3m'
 
 # Functions
 
@@ -16,7 +16,7 @@ declare -r YELLOW='\033[38;5;3m'
 #   $1 - Message to log
 #########################
 log() {
-    printf "%b\n" "${*}" >&2
+    printf "%b\\n" "${*}" >&2
 }
 
 ########################
