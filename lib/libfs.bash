@@ -124,7 +124,7 @@ configure_permissions_ownership() {
                 chgrp -LR "$group" "$p"
             fi
         else
-            stderr_print "$p does not exist"
+            error "$p does not exist"
         fi
     done
 }
