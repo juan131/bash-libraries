@@ -85,7 +85,7 @@ am_i_root() {
 # Arguments:
 #   None
 # Returns:
-#   Memory in bytes
+#   Memory in mebibytes (1024*1024 bytes)
 #########################
 get_total_memory() {
     echo $(($(grep MemTotal /proc/meminfo | awk '{print $2}') / 1024))
